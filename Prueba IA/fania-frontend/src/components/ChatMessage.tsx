@@ -47,9 +47,11 @@ export default function ChatMessage({
 
         {message.response && (
           <>
-            {message.response.risk_level === "RED" && (
+            {message.response.risk_level && (
               <div className="mt-4">
-                <IncidentAlertChart />
+                <IncidentAlertChart
+                  level={message.response.risk_level}
+                />
               </div>
             )}
 
