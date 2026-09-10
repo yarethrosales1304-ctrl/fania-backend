@@ -140,6 +140,35 @@ button {
   height: 20px;
 }
 
+/* .typing-dots — indicador "escribiendo…" mientras FanIA responde (ChatWindow.tsx) */
+.typing-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 0;
+}
+
+.typing-dots > span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  /* !important para ganarle a la regla global de prefers-reduced-motion
+     (`* { animation: none !important }`); el indicador de "escribiendo"
+     debe moverse siempre, como en Messenger/WhatsApp. */
+  animation: typing-bounce 1.4s infinite ease-in-out both !important;
+}
+
+.typing-dots > span:nth-child(1) { animation-delay: -0.28s !important; }
+.typing-dots > span:nth-child(2) { animation-delay: -0.14s !important; }
+.typing-dots > span:nth-child(3) { animation-delay:  0s     !important; }
+
+@keyframes typing-bounce {
+  0%, 70%, 100% { transform: translateY(0); opacity: 0.3; }
+  35%           { transform: translateY(-7px); opacity: 1; }
+}
+
 /* .headline-line — usado en ChatWindow.tsx */
 .headline-line {
   display: block;

@@ -47,14 +47,6 @@ export default function ChatWindow({
             </span>
           </h2>
 
-          <p
-            className="appear appear--soft mt-3 text-sm leading-6 text-zinc-500"
-            style={{ "--d": "0.5s" } as React.CSSProperties}
-          >
-            Soy FanIA, tu asistente inteligente de
-            ciberseguridad empresarial.
-          </p>
-
         </div>
 
       </div>
@@ -86,15 +78,13 @@ export default function ChatWindow({
             className="mt-0.5 h-10 w-10 shrink-0 object-contain mix-blend-screen"
           />
 
-          <div className="max-w-[75%] rounded-2xl rounded-tl-sm border border-white/5 bg-black/40 px-5 py-4 text-sm leading-relaxed text-gray-200 backdrop-blur-md">
+          <div className="rounded-2xl rounded-tl-sm border border-white/5 bg-black/40 px-5 py-4 text-gray-300 backdrop-blur-md">
 
-            <div className="mb-2 font-serif text-lg italic text-white">
-                FanIA
-            </div>
-
-            <div className="text-gray-400">
-                ● ● ● &nbsp; FanIA está analizando...
-            </div>
+            <span className="typing-dots" aria-label="Escribiendo…">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
 
           </div>
 

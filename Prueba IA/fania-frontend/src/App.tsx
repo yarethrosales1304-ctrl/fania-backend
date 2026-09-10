@@ -171,7 +171,7 @@ export default function App() {
 
         {messages.length === 0 ? (
           <div className="flex-1 flex flex-col items-center justify-center w-full px-6 z-10">
-            <div className="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full flex items-center gap-2 mb-6 backdrop-blur-md">
+            <div className="bg-white/5 border border-white/10 px-4 py-1.5 rounded-full flex items-center gap-2 mb-20 backdrop-blur-md">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -191,13 +191,9 @@ export default function App() {
               </span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold text-white text-center mb-4 tracking-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-white text-center tracking-tight">
               ¿En qué puedo ayudarte <br /> hoy?
             </h1>
-
-            <p className="text-gray-400 text-center text-sm md:text-base max-w-md">
-              Soy FanIA, tu asistente inteligente de ciberseguridad empresarial.
-            </p>
           </div>
         ) : (
           <ChatWindow

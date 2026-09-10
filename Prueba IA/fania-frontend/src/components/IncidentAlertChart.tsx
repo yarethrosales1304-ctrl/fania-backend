@@ -117,7 +117,7 @@ const SCENARIOS: Record<Scenario, ScenarioConfig> = {
       title: "¡Alerta Crítica de Seguridad!",
       subtitle: "Posible Exfiltración de Datos Detectada",
       border: "border-red-500/60",
-      shadow: "shadow-[0_0_35px_rgba(239,68,68,0.55)]",
+      shadow: "shadow-[0_0_16px_rgba(239,68,68,0.30)]",
       iconColor: "text-red-500",
     },
     data: RED_DATA,
@@ -131,7 +131,7 @@ const SCENARIOS: Record<Scenario, ScenarioConfig> = {
       title: "Advertencia de Seguridad",
       subtitle: "Comportamiento Sospechoso — Requiere Prevención",
       border: "border-amber-500/60",
-      shadow: "shadow-[0_0_35px_rgba(245,158,11,0.45)]",
+      shadow: "shadow-[0_0_16px_rgba(245,158,11,0.28)]",
       iconColor: "text-amber-400",
     },
     data: YELLOW_DATA,
@@ -145,7 +145,7 @@ const SCENARIOS: Record<Scenario, ScenarioConfig> = {
       title: "Sistema Estable y Seguro",
       subtitle: "Sin Amenazas Detectadas",
       border: "border-emerald-500/50",
-      shadow: "shadow-[0_0_35px_rgba(16,185,129,0.4)]",
+      shadow: "shadow-[0_0_16px_rgba(16,185,129,0.26)]",
       iconColor: "text-emerald-400",
     },
     data: GREEN_DATA,
@@ -166,15 +166,15 @@ export default function IncidentAlertChart({
   const CardIcon = config.card.icon;
 
   return (
-    <div className="mx-auto mb-6 mt-4 flex w-full max-w-2xl flex-col items-center bg-transparent">
+    <div className="mx-auto mb-10 mt-20 flex w-full max-w-2xl flex-col items-center bg-transparent">
       <div
-        className={`relative z-10 mb-10 flex items-center gap-4 rounded-xl border bg-[#161616] px-6 py-3 backdrop-blur-md ${config.card.border} ${config.card.shadow}`}
+        className={`relative z-10 mb-16 flex items-center gap-5 rounded-xl border bg-[#161616] px-7 py-4 backdrop-blur-md ${config.card.border} ${config.card.shadow}`}
       >
         <CardIcon
-          className={`h-7 w-7 ${config.card.iconColor}`}
+          className={`h-7 w-7 shrink-0 ${config.card.iconColor}`}
           strokeWidth={2}
         />
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-1">
           <span className="text-[15px] font-bold uppercase leading-tight tracking-wide text-white">
             {config.card.title}
           </span>
@@ -184,11 +184,11 @@ export default function IncidentAlertChart({
         </div>
       </div>
 
-      <div className="h-[280px] w-full">
+      <div className="h-[300px] w-full">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart
             data={config.data}
-            margin={{ top: 10, right: 10, left: 0, bottom: 25 }}
+            margin={{ top: 20, right: 12, left: 4, bottom: 28 }}
           >
             <defs>
               <linearGradient

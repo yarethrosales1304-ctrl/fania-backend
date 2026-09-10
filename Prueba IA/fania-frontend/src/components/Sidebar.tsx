@@ -1,4 +1,4 @@
-import brainLogo from "../assets/brain.jpg";
+import faniaIcon from "../assets/fania-icon.png";
 
 interface SidebarProps {
   onNewChat: () => void;
@@ -20,28 +20,26 @@ export default function Sidebar({
 
       {/* Header del Sidebar */}
       <div className="mb-8 flex items-center gap-3 px-2">
-        
-        {/* Logo Custom IA con Mix Blend (Sidebar) */}
+
+        {/* Símbolo FanIA */}
         <img
-          src={brainLogo}
-          alt="FanIA Logo"
-          className="h-12 w-12 shrink-0 object-contain mix-blend-screen transition-all hover:scale-105"
+          src={faniaIcon}
+          alt="FanIA"
+          className="h-12 w-12 shrink-0 object-contain transition-all hover:scale-105"
         />
-        
+
         {/* Contenedor de Texto */}
         <div className="flex flex-col justify-center">
-          
-          {/* Título en una sola línea */}
+
           <div className="flex items-baseline">
             <span className="font-serif text-3xl italic leading-none text-white">Fan</span>
             <span className="font-serif text-3xl italic leading-none text-white/50">IA</span>
           </div>
-          
-          {/* Subtítulo */}
+
           <span className="mt-1.5 text-[9px] font-semibold uppercase tracking-[0.25em] text-gray-500">
             Cyber Intelligence
           </span>
-          
+
         </div>
       </div>
 
